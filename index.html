@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind CSS</title>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Family -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Family End -->
 
-  <!-- Font Family End -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: "Urbanist",
-            display2: "Poppins",
-            padding: {
-              "5px": "5px",
-              colors: {
-                blue: "#007FFF",
-                clifford: "#da373d",
-                bordergreen: "#03C03C",
-                grayy: "rgb(155, 155, 155)",
-
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: "Urbanist",
+              display2: "Poppins",
+              padding: {
+                "5px": "5px",
+                colors: {
+                  blue: "#007FFF",
+                  clifford: "#da373d",
+                  bordergreen: "#03C03C",
+                  grayy: "rgb(155, 155, 155)",
+                },
               },
             },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <style type="text/tailwindcss">
-    @layer utilities {
+    <style type="text/tailwindcss">
+      @layer utilities {
         .boox_shadow_style {
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         }
@@ -61,300 +64,1228 @@
         .border_bottom_one {
           border-bottom: 1px dotted #929292;
         }
-        .box-shadow-firstsection{
-          box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+        .box-shadow-firstsection {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          /* box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px; */
         }
-        .little-dollar-box{
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        .little-dollar-box {
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         }
-        
       }
     </style>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <main class="pl-4 pr-4 mb-3 font-display">
-
-
-
-    <!-- MenuBar Section -->
-    <div class="menu">
-      <div class="w-full">
-        <input type="checkbox" id="check" />
-        <label for="check">
-          <img src="/images/menu.png" id="btn" class="w-10 h-10" />
-          <img src="/images/close.png" id="cancel" class="w-8 h-6" />
-        </label>
-        <div class="sidebar fixed left-[-250px] w-60 h-full bg-black transition_one">
-          <header class="text-xl text-white leading-[70px] bg-black border_bottom_one flex">
-            <img class="w-8 h-8 ml-10 mt-5 mr-2" src="./images/letter-m.png" alt="" />
-            Metronic
-          </header>
-          <span class="header-border">&nbsp;</span>
-
-          <div class="flex">
-            <img class="w-8 h-8 ml-10" src="/images/window.png" alt="" />
-            <span class="text-white flex justify-center items-center ml-2.5 mb-2.5">Dashboard</span>
-          </div>
-
-          <ul class="mb-5">
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; Default
-            </li>
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; eCommerce
-            </li>
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; Projects
-            </li>
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; Online Course
-            </li>
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; Marketing
-            </li>
-            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
-              ● &nbsp; Show 12 More
-            </li>
-          </ul>
-
-          <span class="text-white text-base ml-10 mb-3">Pages</span>
-
-          <div>
-            <div class="flex mt-2.5">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/browser.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">User Profile</span>
-            </div>
+  <body>
+    <main class="pl-4 pr-4 mb-3 font-display bg-neutral-50">
+      <!-- MenuBar Section -->
+      <div class="menu">
+        <div class="w-full">
+          <input type="checkbox" id="check" />
+          <label for="check">
+            <img src="/images/menu.png" id="btn" class="w-10 h-10" />
+            <img src="/images/close.png" id="cancel" class="w-8 h-6" />
+          </label>
+          <div
+            class="sidebar fixed left-[-250px] w-60 h-full bg-black transition_one"
+          >
+            <header
+              class="text-xl text-white leading-[70px] bg-black border_bottom_one flex"
+            >
+              <img
+                class="w-8 h-8 ml-10 mt-5 mr-2"
+                src="./images/letter-m.png"
+                alt=""
+              />
+              Metronic
+            </header>
+            <span class="header-border">&nbsp;</span>
 
             <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/user.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">Account</span>
+              <img class="w-8 h-8 ml-10" src="/images/window.png" alt="" />
+              <span
+                class="text-white flex justify-center items-center ml-2.5 mb-2.5"
+                >Dashboard</span
+              >
             </div>
 
-            <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/authentication.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">Authentication</span>
-            </div>
-
-            <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/business.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">Corporate</span>
-            </div>
-
-            <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/network.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">Social</span>
-            </div>
-
-            <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/blog.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">Blog</span>
-            </div>
-
-            <div class="flex">
-              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/info.png" alt="" />
-              <span class="text-white ml-2.5 mb-2.5 text-base">FAQ</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navbar Section -->
-
-    <header class="ml-5 p-3 nevbar-section font-display2">
-      <div class="">
-        <div class="flex justify-between">
-          <input type="checkbox" id="check-right-responsive" />
-          <div class="only-left">
-            <ul class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold">
+            <ul class="mb-5">
               <li
-                class="hover:text-sky-500 p-1 pl-2 pr-2 rounded-md hover:boox_shadow_style hover:text-blue hover:cursor-pointer text-sm">
-                Dashboards
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; Default
               </li>
-              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
-                Pages
+              <li
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; eCommerce
               </li>
-              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
-                Apps
+              <li
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; Projects
               </li>
-              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
-                Layouts
+              <li
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; Online Course
               </li>
-              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
-                Help
+              <li
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; Marketing
               </li>
-              <label for="check-right-responsive" class="close-menu"><i class="fas fa-times"></i></label>
+              <li
+                class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border"
+              >
+                ● &nbsp; Show 12 More
+              </li>
             </ul>
-            <label for="check-right-responsive" class="open-menu"><img src="/images/Navbar/sidebar.png"
-                alt="" /></label>
-          </div>
 
-          <div class="nav-right-section">
-            <ul class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold">
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/search.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/message.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/content-marketing.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/email.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/collection.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-5 h-auto" src="/images/Navbar/brightness.png" alt="" />
-              </li>
-              <li class="p-1 rounded-md hover:border_top">
-                <img class="w-8 h-8 mt-[-5px] mb-0 mr-0 ml-0 rounded-lg" src="/images/smile.jpg" alt="" />
-              </li>
-            </ul>
+            <span class="text-white text-base ml-10 mb-3">Pages</span>
+
+            <div>
+              <div class="flex mt-2.5">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/browser.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base"
+                  >User Profile</span
+                >
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/user.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base">Account</span>
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/authentication.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base"
+                  >Authentication</span
+                >
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/business.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base"
+                  >Corporate</span
+                >
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/network.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base">Social</span>
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/blog.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base">Blog</span>
+              </div>
+
+              <div class="flex">
+                <img
+                  class="w-5 h-5 w-8 h-8 ml-10"
+                  src="/images/menu/info.png"
+                  alt=""
+                />
+                <span class="text-white ml-2.5 mb-2.5 text-base">FAQ</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
 
-    <!-- Title of Dashboard -->
-    <section class="mt-auto flex justify-between mb-4">
-      <div class="hed">
-        <p class="text-xl font-bold font-display ">eCommerce Dashboard</p>
-        <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">
-          Home-Dashboard
-        </p>
-      </div>
-      <div class="flex gap-[0.7rem]">
-        <button
-          class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive">
-          Manage Sales
-        </button>
+      <!-- Navbar Section -->
 
-        <button
-          class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive"
-          id="btn">
-          Add Product
-        </button>
-      </div>
-    </section>
-
-    <!-- First Section -->
-    <section class="first-section pl-2 pr-2">
-      <div class="grid grid-cols-2 four-card s-f-responsive gap-4">
-        <!-- Left-side of content -->
-
-        <div class="leftside-first grid grid-cols-2 gap-4">
-
-          <!-- 1 -->
-          <div class="box-shadow-firstsection rounded-lg  h-52 p-3.5 ">
-            <div class="flex">
-              <p class="text-3xl font-bold font-display2 ">
-                <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>69,700
-              </p>
-              <p
-                class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2">
-                ↑ 2.2%</p>
+      <header class="ml-5 p-3 nevbar-section font-display2">
+        <div class="">
+          <div class="flex justify-between">
+            <input type="checkbox" id="check-right-responsive" />
+            <div class="only-left">
+              <ul
+                class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold"
+              >
+                <li
+                  class="hover:text-sky-500 p-1 pl-2 pr-2 rounded-md hover:boox_shadow_style hover:text-blue hover:cursor-pointer text-sm"
+                >
+                  Dashboards
+                </li>
+                <li
+                  class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm"
+                >
+                  Pages
+                </li>
+                <li
+                  class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm"
+                >
+                  Apps
+                </li>
+                <li
+                  class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm"
+                >
+                  Layouts
+                </li>
+                <li
+                  class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm"
+                >
+                  Help
+                </li>
+                <label for="check-right-responsive" class="close-menu"
+                  ><i class="fas fa-times"></i
+                ></label>
+              </ul>
+              <label for="check-right-responsive" class="open-menu"
+                ><img src="/images/Navbar/sidebar.png" alt=""
+              /></label>
             </div>
 
-            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Expected Earnings</p>
+            <div class="nav-right-section">
+              <ul
+                class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold"
+              >
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/search.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/message.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/content-marketing.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/email.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/collection.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-5 h-auto"
+                    src="/images/Navbar/brightness.png"
+                    alt=""
+                  />
+                </li>
+                <li class="p-1 rounded-md hover:border_top">
+                  <img
+                    class="w-8 h-8 mt-[-5px] mb-0 mr-0 ml-0 rounded-lg"
+                    src="/images/smile.jpg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
 
-            <div class="grid grid-cols-4 mt-7">
-              <div class="">
-                <img src="./images/circle.png" alt="" />
+      <!-- Title of Dashboard -->
+      <section class="mt-auto flex justify-between mb-4 pl-2 pr-2">
+        <div class="hed">
+          <p class="text-xl font-bold font-display">eCommerce Dashboard</p>
+          <p class="text-[#9b9b9b] text-base font-bold">Home-Dashboard</p>
+        </div>
+        <div class="flex gap-[0.7rem]">
+          <button
+            class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive"
+          >
+            Manage Sales
+          </button>
+
+          <button
+            class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive"
+            id="btn"
+          >
+            Add Product
+          </button>
+        </div>
+      </section>
+
+      <!-- First Section -->
+      <section class="pl-2 pr-2">
+        <div class="grid grid-cols-2 four-card s-f-responsive gap-8">
+          <!-- Left-side of content -->
+
+          <div class="leftside-first grid grid-cols-2 gap-8">
+            <!-- 1 -->
+            <div class="box-shadow-firstsection rounded-lg h-52 p-5 bg-white">
+              <div class="flex">
+                <p class="text-3xl font-bold font-display2">
+                  <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>69,700
+                </p>
+                <p
+                  class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2 mt-1"
+                >
+                  ↑ 2.2%
+                </p>
               </div>
 
-              <ul class="list-disc ml-9 text-lg font-bold leading-6">
-                <li class="text-pink-500"></li>
-                <li class="text-blue-500"></li>
-                <li class="text-[#9b9b9b]"></li>
-              </ul>
-
-              <ul class="-ml-7 text-lg font-600 leading-6">
-                <li>Shoes</li>
-                <li>Gaming</li>
-                <li>Others</li>
-              </ul>
-
-              <ul class="-ml-4  text-lg font-bold leading-6">
-                <li>$7,660</li>
-                <li>$2,280</li>
-                <li>$45,257</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
-            <div class="flex">
-              <p class="text-3xl font-bold font-display2">
-                <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>2,420
+              <p class="text-[#9b9b9b] text-base font-bold">
+                Expected Earnings
               </p>
-              <p
-                class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2">
-                ↑ 2.6%</p>
-            </div>
 
-            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Average Daily Sales</p>
-          </div>
+              <div class="grid grid-cols-4 mt-7">
+                <div class="">
+                  <img src="./images/circle.png" alt="" />
+                </div>
 
-          <!-- 3 -->
-          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
-            <div class="flex">
-              <h2 class="text-3xl font-bold font-display2">1863</h2>
-              <p
-                class="little-dollar-box w-14 h-6 rounded-md flex justify-center font-bold text-sm items-center bg-pink-200 text-pink-500 ml-2">
-                ↓ 2.2%</p>
-            </div>
+                <ul class="list-disc ml-9 text-lg font-bold leading-6">
+                  <li class="text-pink-500"></li>
+                  <li class="text-blue-500"></li>
+                  <li class="text-[#9b9b9b]"></li>
+                </ul>
 
-            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Orders This Months</p>
-            <br />
+                <ul class="-ml-7 text-lg font-600 leading-6">
+                  <li>Shoes</li>
+                  <li>Gaming</li>
+                  <li>Others</li>
+                </ul>
 
-            <div class="">
-              <label for="">1,048 to Goal</label><br />
-              <div class="">
-                <div class=""></div>
+                <ul class="-ml-4 text-lg font-bold leading-6">
+                  <li>$7,660</li>
+                  <li>$2,280</li>
+                  <li>$45,257</li>
+                </ul>
               </div>
             </div>
+
+            <!-- 2 -->
+            <div class="box-shadow-firstsection rounded-lg p-5 h-52 bg-white">
+              <div class="flex">
+                <p class="text-3xl font-bold font-display2">
+                  <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>2,420
+                </p>
+                <p
+                  class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2 mt-1"
+                >
+                  ↑ 2.6%
+                </p>
+              </div>
+
+              <p class="text-[#9b9b9b] text-base font-bold">
+                Average Daily Sales
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="box-shadow-firstsection rounded-lg p-5 h-52 bg-white">
+              <div class="flex">
+                <h2 class="text-3xl font-bold font-display2">1863</h2>
+                <p
+                  class="little-dollar-box w-14 h-6 rounded-md flex justify-center font-bold text-sm items-center bg-pink-200 text-pink-500 ml-2 mt-1"
+                >
+                  ↓ 2.2%
+                </p>
+              </div>
+
+              <p class="text-[#9b9b9b] text-base font-bold">
+                Orders This Months
+              </p>
+              <br />
+
+              <div class="">
+                <label for="">1,048 to Goal</label><br />
+                <div class="">
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="box-shadow-firstsection rounded-lg p-5 h-52 bg-white">
+              <p class="text-3xl font-bold font-display2">6.3k</p>
+              <p class="text-[#9b9b9b] text-base font-bold">
+                New Customers This Moths
+              </p>
+
+              <p class="">Today's Heroes</p>
+            </div>
           </div>
 
-          <!-- 4 -->
-          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
-            <p class="text-3xl font-bold font-display2">6.3k</p>
-            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">
-              New Customers This Moths
+          <!-- Right-side of content -->
+          <div class="box-shadow-firstsection rounded-lg p-5 h-auto bg-white">
+            <div class="flex justify-between">
+              <p class="text-xl font-bold font-display2">Sales This Months</p>
+              <div class="">
+                <p
+                  class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-4xl hover:bg-blue-400 hover:text-white hover:cursor-pointer"
+                >
+                  •••
+                </p>
+              </div>
+            </div>
+            <p class="text-[#9b9b9b] text-base font-bold">
+              Users from all chaneels
             </p>
 
-            <p class="">Today's Heroes</p>
+            <p class="text-3xl font-bold font-display2 mt-10">
+              <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>14.094
+            </p>
+            <p class="text-[#9b9b9b] text-base font-bold">
+              Another $48,346 to Goal
+            </p>
           </div>
         </div>
+      </section>
 
-        <!-- Right-side of content -->
-        <div class="box-shadow-firstsection rounded-lg p-3.5 h-auto">
-          <div class="flex justify-between">
-            <p class="text-3xl font-bold font-display2">Sales This Months</p>
+      <!-- Second Section -->
+      <section class="pl-2 pr-2 mt-10">
+        <div class="grid grid-cols-2 four-card s-f-responsive gap-8">
+          <!-- Left Section of card -->
+          <div class="box-shadow-firstsection rounded-lg p-5 pt-6 bg-white">
             <div class="">
-              <p class="flex  justify-center items-center w-5 h-5 little-dollar-box rounded-md bg-gray-200 text-gray-700 text-4xl hover:bg-blue-400 hover:text-white hover:cursor-pointer ">•••</p>
+              <div class="flex justify-between">
+                <p class="text-2xl font-bold font-display2">Recent Orders</p>
+                <div class="">
+                  <p
+                    class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-4xl hover:bg-blue-400 hover:text-white hover:cursor-pointer"
+                  >
+                    •••
+                  </p>
+                </div>
+              </div>
+
+              <ul class="flex justify-evenly mt-10">
+                <li
+                  class="border-2 border-dotted rounded-lg p-3 hover:border-solid hover:border-b-blue-600"
+                >
+                  <img
+                    class="w-14 h-auto"
+                    src="./images/tshirt/tshirt1.png"
+                    alt="images in second section"
+                  />
+                  <p>T Shirt</p>
+                </li>
+                <li
+                  class="border-2 border-dotted rounded-lg p-3 hover:border-solid hover:border-b-blue-600"
+                >
+                  <img
+                    class="w-14 h-auto"
+                    src="./images/tshirt/gaming.png"
+                    alt="images in second section"
+                  />
+                  <p class="">Gaming</p>
+                </li>
+                <li
+                  class="border-2 border-dotted rounded-lg p-3 hover:border-solid hover:border-b-blue-600"
+                >
+                  <img
+                    class="w-14 h-auto"
+                    src="./images//tshirt/smartwatch.png"
+                    alt="images in second section"
+                  />
+                  <p>Watch</p>
+                </li>
+                <li
+                  class="border-2 border-dotted rounded-lg p-3 hover:border-solid hover:border-b-blue-600"
+                >
+                  <img
+                    class="w-14 h-auto"
+                    src="./images/tshirt/gloves.png"
+                    alt="images in second section"
+                  />
+                  <p>Gloves</p>
+                </li>
+                <li
+                  class="border-2 border-dotted rounded-lg p-3 hover:border-solid hover:border-b-blue-600"
+                >
+                  <img
+                    class="w-14 h-auto"
+                    src="./images/tshirt/shoes.png"
+                    alt="images in second section"
+                  />
+                  <p>Shoes</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- for second section sub div -->
+            <div class="p-4">
+              <div class="mt-12">
+                <ul
+                  class="grid grid-cols-5 text-[#9b9b9b] text-sm font-bold text-nowrap"
+                >
+                  <li class="">ITEM</li>
+                  <li class=""></li>
+                  <li class="ml-8">QTY</li>
+                  <li class="ml-12">PRICE</li>
+                  <li class="ml-7">TOTAL PRICE</li>
+                </ul>
+              </div>
+
+              <div class="mt-5 grid grid-cols-5 font-bold">
+                <div class="w-12 h-12">
+                  <ul class="">
+                    <li>
+                      <img class="" src="./images//tshirt/tshirt.png" alt="" />
+                    </li>
+                    <li>
+                      <img
+                        class="mt-5"
+                        src="./images//tshirt/clothes.png"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        class="mt-5"
+                        src="./images//tshirt/printing.png"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="-ml-8">
+                  <ul class="">
+                    <li class="">
+                      Elephant 1802
+                      <p class="text-[#9b9b9b] text-sm font-bold">
+                        Items: #XDG-2347
+                      </p>
+                    </li>
+                    <li class="mt-6">
+                      Red Laga
+                      <p class="text-[#9b9b9b] text-sm font-bold">
+                        Items: #XDG-1321
+                      </p>
+                    </li>
+                    <li class="mt-6">
+                      RiseUp
+                      <p class="text-[#9b9b9b] text-sm font-bold">
+                        Items: #XDG-4321
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="ml-10">
+                  <!-- <p class="  left-align">QTY</p> -->
+                  <ul class="">
+                    <li class="mt-1">x1</li>
+                    <li class="mt-11">x2</li>
+                    <li class="mt-12">x3</li>
+                  </ul>
+                </div>
+
+                <div class="ml-10">
+                  <!-- <p class="  left-align">PRICE</p> -->
+
+                  <ul class="">
+                    <li class="mt-1">$72.00</li>
+                    <li class="mt-11">$45.00</li>
+                    <li class="mt-12">$84.00</li>
+                  </ul>
+                </div>
+
+                <div class="ml-10">
+                  <!-- <p class="">TOTAL PRICE</p> -->
+                  <ul class="">
+                    <li class="mt-1">$126.00</li>
+                    <li class="mt-11">$76.00</li>
+                    <li class="mt-12">$168.00</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Users from all chaneels</p>
 
-          <p class="text-3xl font-bold font-display2 mt-10">
-            <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>14.094
-          </p>
-          <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Another $48,346 to Goal</p>
+          <!-- Right section of card -->
+          <!-- 2 -->
+          <div class="box-shadow-firstsection rounded-lg p-5 pt-6 bg-white">
+            <div class="">
+              <div class="flex justify-between">
+                <p class="text-xl font-bold font-display2">
+                  Discouted Product Sales
+                </p>
+                <div class="">
+                  <p
+                    class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-4xl hover:bg-blue-400 hover:text-white hover:cursor-pointer"
+                  >
+                    •••
+                  </p>
+                </div>
+              </div>
+
+              <p class="text-[#9b9b9b] text-base font-bold">
+                Users from channels
+              </p>
+
+              <div class="flex mt-20">
+                <p class="text-3xl font-bold font-display2">
+                  <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>3,706
+                </p>
+                <p
+                  class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2 mt-1"
+                >
+                  ↓ 4.5%
+                </p>
+              </div>
+
+              <p class="text-[#9b9b9b] text-base font-bold">
+                Total Discount sales This Month
+              </p>
+            </div>
+          </div>
+
+          <!-- </div> -->
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Third Section -->
+      <section class="pl-2 pr-2 mt-10">
+        <div>
+          <div class="flex gap-8">
+
+            <!-- Left Card -->
+            <div class="box-shadow-firstsection rounded-lg p-5 pt-6 bg-white w-96">
+              <div class="mt-5">
+                <p class="text-xl  text-center font-display2">Have you tried</p>
+                <p class="text-xl text-center font-bold font-display2">new <strong>eCommerce App?</strong></p>
+                <img class="mt-5" src="./images/third-div.png" alt="" />
+                <div class="mt-2 text-center">
+                  <button class="mr-2 w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive">View App</button>
+                  <button class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive">New Product</button>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Right Card -->
+            <div class="w-4/5">
+              <div class="box-shadow-firstsection box-shadow-firstsection rounded-lg p-5 pt-6 bg-white ">
+
+                <div class="flex text-lg  ">
+                  <p class="text-nowrap font-bold">Product Orders</p>
+                  <br />
+                  <!-- <div class="space-event"> -->
+                  <p class="text-nowrap ml-20 text-[#9b9b9b] text-base font-bold">Category</p>
+
+                  <label for="select" class="text-nowrap font-bold ml-7">Show All</label>
+                  <select name="cars" class="text-nowrap w-5 h-5 border-none " id="cars"></select>
+
+                  <p class="text-[#9b9b9b] text-base font-bold">Status</p>
+
+                  <label for="select" class="text-nowrap font-bold ml-8">Show All</label>
+                  <select name="cars" class="text-nowrap border-none w-5 h-5"  id="cars"></select>
+
+                  <div class="flex ml-8">
+                    <img src="./images/glass.png" class="w-7 h-7" alt="" />
+                    <p class="text-[#9b9b9b] text-base font-bold">Search</p>
+                  </div>
+                  <!-- </div> -->
+                </div>
+
+                <p class="text-[#9b9b9b] text-base font-bold ">Avg. 57 orders per day</p>
+
+
+                <!-- Categories -->
+                <div class="mt-6">
+                  <!--begin::Card body-->
+                  <div class="">
+                    <table>
+                      <thead>
+                        <tr class="">
+                          <th class="">Order ID</th>
+                          <th class="">Created</th>
+                          <th class="">Customer</th>
+                          <th class="">Total</th>
+                          <th class="">Profit</th>
+                          <th class="">Status</th>
+                          <th class=""></th>
+                        </tr>
+                      </thead>
+
+                      <tbody class="">
+                        <tr>
+                          <td>
+                            <span>#XGY-346</span>
+                          </td>
+
+                          <td class="">7 min ago</td>
+
+                          <td>
+                            <span class="">Albert Flores</span>
+                          </td>
+
+                          <td class="">$630.00</td>
+
+                          <td>
+                            <span>$86.70</span>
+                          </td>
+
+                          <td>
+                            <span class="">Pending</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#YHD-047</span>
+                          </td>
+
+                          <td class="">52 min ago</td>
+
+                          <td>
+                            <span class="">Jenny Wilson</span>
+                          </td>
+
+                          <td class="">$25.00</td>
+
+                          <td>
+                            <span>$4.20</span>
+                          </td>
+
+                          <td>
+                            <span class="2">Confirmed</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#SRR-678</span>
+                          </td>
+
+                          <td class="">1 hour ago</td>
+
+                          <td>
+                            <span class="">Robert Fox</span>
+                          </td>
+
+                          <td class="">$1,630.00</td>
+
+                          <td>
+                            <span>$203.90</span>
+                          </td>
+
+                          <td>
+                            <span class="">Pending</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#PXF-534</span>
+                          </td>
+
+                          <td class="">3 hour ago</td>
+
+                          <td>
+                            <span class="">Cody Fisher</span>
+                          </td>
+
+                          <td class="">$119.00</td>
+
+                          <td>
+                            <span>$12.00</span>
+                          </td>
+
+                          <td>
+                            <span class="">Shipped</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#XGD-249</span>
+                          </td>
+
+                          <td class="">2 day ago</td>
+
+                          <td>
+                            <span class="">Arlene McCoy</span>
+                          </td>
+
+                          <td class="">$660.00</td>
+
+                          <td>
+                            <span>$52.26</span>
+                          </td>
+
+                          <td>
+                            <span class="">Shipped</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#SKP-035</span>
+                          </td>
+
+                          <td class="">2 day ago</td>
+
+                          <td>
+                            <span class="">Eleanor Pena</span>
+                          </td>
+
+                          <td class="">$290.00</td>
+
+                          <td>
+                            <span>$29.00</span>
+                          </td>
+
+                          <td>
+                            <span class="">Rejected</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span>#SKP-567</span>
+                          </td>
+
+                          <td class="">7 min ago</td>
+
+                          <td>
+                            <span class="">Dan Wilson</span>
+                          </td>
+
+                          <td class="">$590.00</td>
+
+                          <td>
+                            <span>$50.00</span>
+                          </td>
+
+                          <td>
+                            <span class="">Shipped</span>
+                          </td>
+
+                          <td>
+                            <div type="button">
+                              <span class="">+</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <!--end::Table body-->
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Forth Section -->
+      <section class="pl-2 pr-2 mt-10">
+
+        <div class="flex gap-8">
+
+          <!-- left side -->
+          <div class="box-shadow-firstsection rounded-lg p-5 pt-6 bg-white w-96">
+            <div class="">
+
+              <div class="">
+                <div class="flex justify-between">
+                  <p class="text-lg font-bold font-display2">Product Delivery</p>
+                  <button class="text-[#9b9b9b] text-base font-bold">Order Detail</button>
+                </div>
+  
+                <p class="text-[#9b9b9b] text-base font-bold">
+                  <span class=""
+                    >1M Products Shippped so far</span
+                  >
+                </p>
+              </div>
+  
+              <div class="">
+                
+                <div class="border-2 border-dotted p-3 rounded-lg">
+                  <div class="flex">
+                    <img src="/images/tshirt/tshirt.png" class="w-12 h-12" alt="" />
+                    <div class="ml-3 font-bold text-sm text-[#9b9b9b] mt-3">Elephant 1802</div>
+                    
+                    <div class="ml-24 mt-4">
+                      <p class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-3xl hover:bg-blue-400 hover:text-white hover:cursor-pointer rounded-md"> •••
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-3 text-[#9b9b9b] text-sm font-bold flex justify-between">
+                    <p class="mt-1">
+                      <span class="">To:</span> Jason
+                      Bourne
+                    </p>
+                    <p class="little-dollar-box w-20 h-6 rounded-md flex justify-center text-emerald-500  text-sm items-center bg-green-200 ml-2 ">Delivered</p>
+                  </div>
+                </div>
+  
+                <div class="mt-2 border-2 border-dotted p-3 rounded-lg">
+                  <div class=" flex">
+                    <img src="/images/tshirt/printing.png" class="w-12 h-12" alt="" />
+                    <div class="ml-3 font-bold text-sm text-[#9b9b9b] mt-3">Elephant 1802</div>
+                    <div class="ml-24 mt-4">
+                      <p class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-3xl hover:bg-blue-400 hover:text-white hover:cursor-pointer rounded-md">•••</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 text-[#9b9b9b] text-sm font-bold flex justify-between">
+                    <p class="mt-1">
+                      <span class="">To:</span> Marie
+                      Durant &nbsp;
+                    </p>
+                    <p class="little-dollar-box w-20 h-6 rounded-md flex justify-center text-blue-500  text-sm items-center bg-blue-100 ml-2">Shipping</p>
+                  </div>
+                </div>
+  
+                <div class="mt-2 border-2 border-dotted p-3 rounded-lg">
+                  <div class="flex">
+                    <img src="/images/tshirt/mockup-design.png" class="w-12 h-12" alt="" />
+                    <div class="ml-3 font-bold text-sm text-[#9b9b9b] mt-3">Elephant 1802</div>
+                    <div class="ml-24 mt-4">
+                      <p class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-3xl hover:bg-blue-400 hover:text-white hover:cursor-pointer rounded-md">•••</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 text-[#9b9b9b] text-sm font-bold flex justify-between">
+                    <p class="mt-1">
+                      <span class="">To:</span> Dan Wilson
+                      &nbsp;&nbsp;&nbsp;
+                    </p>
+                    <p class="little-dollar-box w-20 h-6 rounded-md flex justify-center text-pink-500  text-sm items-center bg-pink-100 ml-2">Confirmed</p>
+                  </div>
+                </div>
+  
+                <div class="mt-2 border-2 border-dotted p-3 rounded-lg">
+                  <div class="flex">
+                    <img src="/images/tshirt/clothes.png" class="w-12 h-12" alt="" />
+                    <div class="ml-3 font-bold text-sm text-[#9b9b9b] mt-3">Elephant 1802</div>
+                    <div class="ml-24 mt-4">
+                      <p class="flex justify-center items-center w-5 h-5 little-dollar-boounded-md bg-gray-200 text-gray-700 text-3xl hover:bg-blue-400 hover:text-white hover:cursor-pointer rounded-md">•••</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 text-[#9b9b9b] text-sm font-bold flex justify-between">
+                    <p class="mt-1">
+                      <span class="">To:</span> Jason
+                      Bourne
+                    </p>
+                    <p class="little-dollar-box w-20 h-6 rounded-md flex justify-center text-emerald-500  text-sm items-center bg-green-200 ml-2">Delivered</p>
+                  </div>
+                </div>
+              </div>
+  
+              
+            </div>
+          </div>
+  
+          <!-- Rightside -->
+          <div class="w-4/5">
+            <div class="box-shadow-firstsection box-shadow-firstsection rounded-lg p-5 pt-6 bg-white">
+              
+              <div class="">
+                <p class="">Stock Report</p>
+                <br />
+                <!-- <div class="space-event"> -->
+                <p class="">Category</p>
+  
+                <label for="select" class="">Show All</label>
+                <select name="cars" class="" id="cars"></select>
+  
+                <p class="">Status</p>
+  
+                <label for="select" class="">Show All</label>
+                <select name="cars" class="" id="cars"></select>
+  
+                <button class="">View Stock</button>
+              <!-- </div> -->
+            </div>
+              <p class="">Total 2,356 Items in the Stock</p>
+  
+              <!-- Table section -->
+              <div class="">
+  
+                <div class="">
+                  <table class="">
+                    <thead>
+                      <tr class="">
+                        <th class="">ITEM</th>
+                        <th class="">PRODUCT ID</th>
+                        <th class="">DATE ADDED</th>
+                        <th class="">PRICE</th>
+                        <th class="">STATUS</th>
+                        <th class="">QTY</th>
+                      </tr>
+                    </thead>
+  
+                    <tbody class="">
+                      <tr>
+                        <td>
+                          <span>Mackbook Air M1</span>
+                        </td>
+  
+                        <td class="">#XGY-356</td>
+  
+                        <td>
+                          <span class="">2 Apr, 2024</span>
+                        </td>
+  
+                        <td class="">$1,230</td>
+  
+                        <td>
+                          <span class="">In Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>58 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Surface Laptop 4</span>
+                        </td>
+  
+                        <td class="">#YHD-047</td>
+  
+                        <td>
+                          <span class="">01 Apr, 2024</span>
+                        </td>
+  
+                        <td class="">$1,060</td>
+  
+                        <td>
+                          <span class="">Out of Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>0 PCS</span>
+                        </td>
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Logitech MX 250</span>
+                        </td>
+  
+                        <td class="">#SRR-678</td>
+  
+                        <td>
+                          <span class="">24 Mar, 2024</span>
+                        </td>
+  
+                        <td class="">$64</td>
+  
+                        <td>
+                          <span class="">In Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>290 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>AudioEngine HD3</span>
+                        </td>
+  
+                        <td class="">#PXF-578</td>
+  
+                        <td>
+                          <span class="">24 Mar, 2024</span>
+                        </td>
+  
+                        <td class="">$1,060</td>
+  
+                        <td>
+                          <span class="">Out of Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>46 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>HP Hyper LTR</span>
+                        </td>
+  
+                        <td class="">#PXF-778</td>
+  
+                        <td>
+                          <span class="">16 Jan, 2024</span>
+                        </td>
+  
+                        <td class="">$4500</td>
+  
+                        <td>
+                          <span class="">In Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>78 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dell 32 UltraSharp</span>
+                        </td>
+  
+                        <td class="">#XGY-356</td>
+  
+                        <td>
+                          <span class="">22 Dec, 2024</span>
+                        </td>
+  
+                        <td class="">$1,060</td>
+  
+                        <td>
+                          <span class="">Low Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>8 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Google Pixel 6 Pro</span>
+                        </td>
+  
+                        <td class="">#XVR-425</td>
+  
+                        <td>
+                          <span class="">27 Dec, 2024</span>
+                        </td>
+  
+                        <td class="">$1,060</td>
+  
+                        <td>
+                          <span class="">In Stock</span>
+                        </td>
+  
+                        <td>
+                          <span>124 PCS</span>
+                        </td>
+  
+  
+                      </tr>
+                    </tbody>
+                    <!--end::Table body-->
+                  </table>
+                </div>
+              </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
-    
-  </main>
-</body>
 
+
+
+
+    </main>
+  </body>
 </html>
