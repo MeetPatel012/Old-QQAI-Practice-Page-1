@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind CSS</title>
 
   <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <!-- Font Family End -->
 
@@ -24,181 +27,173 @@
         extend: {
           fontFamily: {
             display: "Urbanist",
-
+            display2: "Poppins",
             padding: {
-              '5px': '5px',
+              "5px": "5px",
               colors: {
-                'blue': '#007FFF',
-                clifford: '#da373d',
-                bordergreen: '#03C03C',
-                // boxshadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+                blue: "#007FFF",
+                clifford: "#da373d",
+                bordergreen: "#03C03C",
+                grayy: "rgb(155, 155, 155)",
+
               },
             },
           },
         },
       },
-    }
+    };
   </script>
 
   <style type="text/tailwindcss">
     @layer utilities {
-   
-    }
-        .boox_shadow_style{
-              box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
-            }
-            .boox_shadow_style2{
-              box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-            }
-            .border_top{
-              border-top: 2px solid #03c03c;
-            }
-          .transition_one{
-               transition: all 0.5s ease;
-              }
-          .border_bottom_one{
-            border-bottom: 1px dotted #929292;
-            
-          }
-  
-</style>
+        .boox_shadow_style {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .boox_shadow_style2 {
+          box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+        }
+        .border_top {
+          border-top: 2px solid #03c03c;
+        }
+        .transition_one {
+          transition: all 0.5s ease;
+        }
+        .border_bottom_one {
+          border-bottom: 1px dotted #929292;
+        }
+        .box-shadow-firstsection{
+          box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+        }
+        .little-dollar-box{
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+        
+      }
+    </style>
 
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div>
+  <main class="pl-4 pr-4 mb-3 font-display">
+
+
+
     <!-- MenuBar Section -->
+    <div class="menu">
+      <div class="w-full">
+        <input type="checkbox" id="check" />
+        <label for="check">
+          <img src="/images/menu.png" id="btn" class="w-10 h-10" />
+          <img src="/images/close.png" id="cancel" class="w-8 h-6" />
+        </label>
+        <div class="sidebar fixed left-[-250px] w-60 h-full bg-black transition_one">
+          <header class="text-xl text-white leading-[70px] bg-black border_bottom_one flex">
+            <img class="w-8 h-8 ml-10 mt-5 mr-2" src="./images/letter-m.png" alt="" />
+            Metronic
+          </header>
+          <span class="header-border">&nbsp;</span>
 
-    <div>
-    <input type="checkbox" id="check" />
-    <label for="check">
-      <img src="/images/menu.png" id="btn" class="w-10 h-10" />
-      <img src="/images/close.png" id="cancel" class="w-10 h-10" />
-    </label>
-    <div class="sidebar fixed left-[-250px] w-60 h-full bg-black transition_one">
-      <header class="text-xl text-white leading-[70px] bg-black border_bottom_one">
-        <img class="w-8 h-8 ml-10" src="./images/letter-m.png" alt="" />
-        Metronic
-      </header>
-      <span class="header-border">&nbsp;</span>
+          <div class="flex">
+            <img class="w-8 h-8 ml-10" src="/images/window.png" alt="" />
+            <span class="text-white flex justify-center items-center ml-2.5 mb-2.5">Dashboard</span>
+          </div>
 
-      <div class="flex">
-        <img class="w-8 h-8 ml-10" src="/images/window.png" alt="" />
-        <span class="text-white flex justify-center items-center ml-2.5 mb-2.5">Dashboard</span>
-      </div>
+          <ul class="mb-5">
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; Default
+            </li>
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; eCommerce
+            </li>
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; Projects
+            </li>
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; Online Course
+            </li>
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; Marketing
+            </li>
+            <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">
+              ● &nbsp; Show 12 More
+            </li>
+          </ul>
 
-      <ul class="mb-5">
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp; Default
-        </li>
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp;
-          eCommerce
-        </li>
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp;
-          Projects
-        </li>
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp; Online
-          Course</li>
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp;
-          Marketing
-        </li>
-        <li class="text-white block h-full w-full leading-8 text-xs pl-10 ml-6 duration-500 box-border">● &nbsp; Show 12
-          More</li>
-      </ul>
+          <span class="text-white text-base ml-10 mb-3">Pages</span>
 
-      <span class="text-white text-base ml-10 mb-3">Pages</span>
+          <div>
+            <div class="flex mt-2.5">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/browser.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">User Profile</span>
+            </div>
 
-      <div>
-        <div class="flex mt-2.5">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/browser.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">User Profile</span>
-        </div>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/user.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">Account</span>
+            </div>
 
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/user.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">Account</span>
-        </div>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/authentication.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">Authentication</span>
+            </div>
 
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/authentication.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">Authentication</span>
-        </div>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/business.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">Corporate</span>
+            </div>
 
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/business.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">Corporate</span>
-        </div>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/network.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">Social</span>
+            </div>
 
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/network.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">Social</span>
-        </div>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/blog.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">Blog</span>
+            </div>
 
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/blog.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">Blog</span>
-        </div>
-
-        <div class="flex">
-          <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/info.png" alt="" />
-          <span class="twxt-white ml-2.5 mb-2.5 text-base">FAQ</span>
+            <div class="flex">
+              <img class="w-5 h-5 w-8 h-8 ml-10" src="/images/menu/info.png" alt="" />
+              <span class="text-white ml-2.5 mb-2.5 text-base">FAQ</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-
-
-
     <!-- Navbar Section -->
 
-    <header class="nevbar-section font-display">
+    <header class="ml-5 p-3 nevbar-section font-display2">
       <div class="">
         <div class="flex justify-between">
-
-          <input type="checkbox" id="check-right-responsive">
+          <input type="checkbox" id="check-right-responsive" />
           <div class="only-left">
-            <ul class="text-sm flex gap-2 list-none mt-4 mb-8 tracking-widest font-bold">
-
-              <li class="hover:text-sky-500 
-              p-1 rounded-md 
-              hover:boox_shadow_style hover:text-blue hover:cursor-pointer
-              
-              ">
-                Dashboards</li>
-              <li class="
-              p-1 rounded-md 
-              hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer
-              
-              ">
-                Pages</li>
-              <li class="
-              p-1 rounded-md 
-              hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer
-              
-              ">
-                Apps</li>
-              <li class="
-              p-1 rounded-md 
-              hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer
-              
-              ">
-                Layouts</li>
-              <li class="
-              p-1 rounded-md 
-              hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer
-              
-              ">
-                Help</li>
+            <ul class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold">
+              <li
+                class="hover:text-sky-500 p-1 pl-2 pr-2 rounded-md hover:boox_shadow_style hover:text-blue hover:cursor-pointer text-sm">
+                Dashboards
+              </li>
+              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
+                Pages
+              </li>
+              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
+                Apps
+              </li>
+              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
+                Layouts
+              </li>
+              <li class="p-1 rounded-md hover:boox_shadow_style hover:text-sky-500 hover:cursor-pointer text-sm">
+                Help
+              </li>
               <label for="check-right-responsive" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
-            <label for="check-right-responsive" class="open-menu"><img src="/images/Navbar/sidebar.png" alt=""></label>
+            <label for="check-right-responsive" class="open-menu"><img src="/images/Navbar/sidebar.png"
+                alt="" /></label>
           </div>
 
           <div class="nav-right-section">
-            <ul class="text-sm flex gap-2 list-none mt-4 mb-8 tracking-widest font-bold">
+            <ul class="text-sm flex gap-2 list-none mt-4 mb-3 tracking-widest font-bold">
               <li class="p-1 rounded-md hover:border_top">
                 <img class="w-5 h-auto" src="/images/Navbar/search.png" alt="" />
               </li>
@@ -227,56 +222,65 @@
     </header>
 
     <!-- Title of Dashboard -->
-    <section class=" mt-auto flex justify-between mb-4">
+    <section class="mt-auto flex justify-between mb-4">
       <div class="hed">
-        <p class="text-lg font-bold font-display">eCommerce Dashboard</p>
-        <p class="text-[#9b9b9b] text-sm font-bold   s-size-responsive">Home-Dashboard</p>
+        <p class="text-xl font-bold font-display ">eCommerce Dashboard</p>
+        <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">
+          Home-Dashboard
+        </p>
       </div>
       <div class="flex gap-[0.7rem]">
-        <button class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8]
-      
-      s-btn-responsive">Manage Sales</button>
+        <button
+          class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive">
+          Manage Sales
+        </button>
 
-        <button class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8]
-
-      s-btn-responsive" id="btn">Add Product</button>
+        <button
+          class="w-[100px] h-3/5 font-['Urbanist',_sans-serif] p-[8px] border-[0] text-xs font-semibold box-shadow:boox_shadow_style2 rounded bg-[rgb(241,_241,_241)] hover:text-[white] hover:bg-[#0275d8] s-btn-responsive"
+          id="btn">
+          Add Product
+        </button>
       </div>
     </section>
 
     <!-- First Section -->
-    <section class="first-section">
-      <div class=" grid four-card s-f-responsive">
+    <section class="first-section pl-2 pr-2">
+      <div class="grid grid-cols-2 four-card s-f-responsive gap-4">
         <!-- Left-side of content -->
-        <div class="grid leftside-first">
+
+        <div class="leftside-first grid grid-cols-2 gap-4">
+
           <!-- 1 -->
-          <div class="align-item">
-            <div class="console2">
-              <p class="big">
-                <sup class="p-color small small-responsive">$</sup>69,700
+          <div class="box-shadow-firstsection rounded-lg  h-52 p-3.5 ">
+            <div class="flex">
+              <p class="text-3xl font-bold font-display2 ">
+                <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>69,700
               </p>
-              <p class="little-dollar2">↑ 2.2%</p>
+              <p
+                class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2">
+                ↑ 2.2%</p>
             </div>
 
-            <p class="p-color s-blockfont-responsive">Expected Earnings</p>
+            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Expected Earnings</p>
 
-            <div class="three-ul">
-              <div class="c1">
+            <div class="grid grid-cols-4 mt-7">
+              <div class="">
                 <img src="./images/circle.png" alt="" />
               </div>
 
-              <ul class="ul-1">
-                <li class="color1"></li>
-                <li class="color2"></li>
-                <li class="color3"></li>
+              <ul class="list-disc ml-9 text-lg font-bold leading-6">
+                <li class="text-pink-500"></li>
+                <li class="text-blue-500"></li>
+                <li class="text-[#9b9b9b]"></li>
               </ul>
 
-              <ul class="c3 ul-2">
+              <ul class="-ml-7 text-lg font-600 leading-6">
                 <li>Shoes</li>
                 <li>Gaming</li>
                 <li>Others</li>
               </ul>
 
-              <ul class="c4 ul-3">
+              <ul class="-ml-4  text-lg font-bold leading-6">
                 <li>$7,660</li>
                 <li>$2,280</li>
                 <li>$45,257</li>
@@ -285,68 +289,72 @@
           </div>
 
           <!-- 2 -->
-          <div class="align-item">
-            <div class="console2">
-              <p class="big">
-                <sup class="p-color small small-responsive">$</sup>2,420
+          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
+            <div class="flex">
+              <p class="text-3xl font-bold font-display2">
+                <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>2,420
               </p>
-              <p class="little-dollar2 s-up-responsive">↑ 2.6%</p>
+              <p
+                class="little-dollar-box w-14 h-6 rounded-md flex justify-center text-emerald-500 font-bold text-sm items-center bg-green-200 ml-2">
+                ↑ 2.6%</p>
             </div>
 
-            <p class="p-color s-blockfont-responsive">Average Daily Sales</p>
+            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Average Daily Sales</p>
           </div>
 
           <!-- 3 -->
-          <div class="align-item">
-            <div class="console2">
-              <h2 class="big">1863</h2>
-              <p class="little-dollar3">↓ 2.2%</p>
+          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
+            <div class="flex">
+              <h2 class="text-3xl font-bold font-display2">1863</h2>
+              <p
+                class="little-dollar-box w-14 h-6 rounded-md flex justify-center font-bold text-sm items-center bg-pink-200 text-pink-500 ml-2">
+                ↓ 2.2%</p>
             </div>
 
-            <p class="p-color s-blockfont-responsive">Orders This Months</p>
+            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Orders This Months</p>
             <br />
 
-            <div class="p-box">
-              <label for="html">1,048 to Goal</label><br />
-              <div class="box">
-                <div class="line"></div>
+            <div class="">
+              <label for="">1,048 to Goal</label><br />
+              <div class="">
+                <div class=""></div>
               </div>
             </div>
           </div>
 
           <!-- 4 -->
-          <div class="align-item">
-            <p class="big">6.3k</p>
-            <p class="p-color s-blockfont-responsive">
+          <div class="box-shadow-firstsection rounded-lg p-3.5 h-52">
+            <p class="text-3xl font-bold font-display2">6.3k</p>
+            <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">
               New Customers This Moths
             </p>
 
-            <p class="hero-responsive">Today's Heroes</p>
+            <p class="">Today's Heroes</p>
           </div>
         </div>
 
         <!-- Right-side of content -->
-        <div class="rightside">
-          <div class="flex-card">
-            <p class="heading-third heading-responsive">Sales This Months</p>
-            <div class="dot-div3">
-              <p class="dot-btn">•••</p>
+        <div class="box-shadow-firstsection rounded-lg p-3.5 h-auto">
+          <div class="flex justify-between">
+            <p class="text-3xl font-bold font-display2">Sales This Months</p>
+            <div class="">
+              <p class="flex  justify-center items-center w-5 h-5 little-dollar-box rounded-md bg-gray-200 text-gray-700 text-4xl hover:bg-blue-400 hover:text-white hover:cursor-pointer ">•••</p>
             </div>
           </div>
-          <p class="p-color p-color-responsive">Users from all chaneels</p>
+          <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Users from all chaneels</p>
 
-          <p class="big pad">
-            <sup class="small small-responsive">$</sup>14.094
+          <p class="text-3xl font-bold font-display2 mt-10">
+            <sup class="text-xl font-bold text-[#9b9b9b]">$</sup>14.094
           </p>
-          <p class="p-color p-color-responsive">Another $48,346 to Goal</p>
+          <p class="text-[#9b9b9b] text-base font-bold s-size-responsive">Another $48,346 to Goal</p>
         </div>
       </div>
     </section>
 
 
 
-
-  </div>
+    
+  </main>
 </body>
 
 </html>
